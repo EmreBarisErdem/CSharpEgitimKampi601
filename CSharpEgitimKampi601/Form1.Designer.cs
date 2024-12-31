@@ -45,6 +45,7 @@
 			this.btnAdd = new System.Windows.Forms.Button();
 			this.btnDelete = new System.Windows.Forms.Button();
 			this.btnUpdate = new System.Windows.Forms.Button();
+			this.btnGetById = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -164,7 +165,7 @@
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.RowHeadersWidth = 62;
 			this.dataGridView1.RowTemplate.Height = 28;
-			this.dataGridView1.Size = new System.Drawing.Size(735, 641);
+			this.dataGridView1.Size = new System.Drawing.Size(1533, 641);
 			this.dataGridView1.TabIndex = 12;
 			// 
 			// btnList
@@ -177,6 +178,7 @@
 			this.btnList.TabIndex = 13;
 			this.btnList.Text = "Listele";
 			this.btnList.UseVisualStyleBackColor = false;
+			this.btnList.Click += new System.EventHandler(this.btnList_Click);
 			// 
 			// btnAdd
 			// 
@@ -200,6 +202,7 @@
 			this.btnDelete.TabIndex = 15;
 			this.btnDelete.Text = "Sil";
 			this.btnDelete.UseVisualStyleBackColor = false;
+			this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
 			// 
 			// btnUpdate
 			// 
@@ -211,12 +214,26 @@
 			this.btnUpdate.TabIndex = 16;
 			this.btnUpdate.Text = "Güncelle";
 			this.btnUpdate.UseVisualStyleBackColor = false;
+			this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+			// 
+			// btnGetById
+			// 
+			this.btnGetById.BackColor = System.Drawing.Color.IndianRed;
+			this.btnGetById.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.btnGetById.Location = new System.Drawing.Point(162, 685);
+			this.btnGetById.Name = "btnGetById";
+			this.btnGetById.Size = new System.Drawing.Size(209, 56);
+			this.btnGetById.TabIndex = 17;
+			this.btnGetById.Text = "Id\'ye göre getir";
+			this.btnGetById.UseVisualStyleBackColor = false;
+			this.btnGetById.Click += new System.EventHandler(this.btnGetById_Click);
 			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1142, 810);
+			this.ClientSize = new System.Drawing.Size(1955, 810);
+			this.Controls.Add(this.btnGetById);
 			this.Controls.Add(this.btnUpdate);
 			this.Controls.Add(this.btnDelete);
 			this.Controls.Add(this.btnAdd);
@@ -261,6 +278,7 @@
 		private System.Windows.Forms.Button btnAdd;
 		private System.Windows.Forms.Button btnDelete;
 		private System.Windows.Forms.Button btnUpdate;
+		private System.Windows.Forms.Button btnGetById;
 	}
 }
 
